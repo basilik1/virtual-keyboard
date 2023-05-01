@@ -9,7 +9,8 @@ keyboardTitle.className = "keyboard-title";
 keyboardText.className = "keyboard-text text";
 keyboardBody.className = "keyboard-body";
 keyboardLine.className = "keyboard-line";
-keyboardTitle.textContent = "virtual keyboard";
+keyboardTitle.textContent = "Virtual keyboard";
+keyboardText.textContent = "Слабая работа, буду рад если оцените чуть позже"
 
 document.body.prepend(keyboardDiv)
 keyboardDiv.append(keyboardTitle);
