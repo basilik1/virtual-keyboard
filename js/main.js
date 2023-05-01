@@ -63,7 +63,6 @@ const keyboardKeysArr = [
   { label: 'Enter', value: 'Enter' },
 
   {  label: 'shiftLeft', value: 'Shift' },
-  // {  label: '\\', value: '\\' },
   {  label: 'Z', value: 'z' },
   {  label: 'X', value: 'x' },
   {  label: 'C', value: 'c' },
@@ -99,7 +98,7 @@ for ( let i = 0; i < keyboardKeysArr.length; i++ ) {
 
   keyboardLine.append( keyboardKey);
   keyboardKey.append( keyboardSpan);
-  
+
   if(keyboardKeysArr[i].label === "Backspace") {
     keyboardKey.classList.add('backspace');
   }
