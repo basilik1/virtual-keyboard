@@ -73,7 +73,7 @@ const keyboardKeysArr = [
   {  data: "data-special", label: ',', value: ',' },
   {  data: "data-special", label: '.', value: '.' },
   {  data: "data-special", label: '/', value: "/" },
-  {  data: "data-special", label: 'up', value: '↑' },
+  {  label: 'up', value: '↑' },
   {  label: 'shiftRight', value: 'Shift' },
 
   {  label: 'Ctrl', value: 'Ctrl' },
@@ -153,7 +153,7 @@ for ( let i = 0; i < keyboardKeysArr.length; i++ ) {
   keyboardKey.addEventListener('click', (e) => {
     let target = e.target;
     let textarea = keyboardText;
-    let button = keyboardKeysArr[i]
+    let button = keyboardKeysArr[i];
     textarea.focus();
     
 
@@ -169,6 +169,27 @@ for ( let i = 0; i < keyboardKeysArr.length; i++ ) {
     
     
   })
+
+  document.addEventListener('keydown', (e)=> {
+    let button = keyboardKeysArr[i];
+    
+    let textarea = keyboardText;
+    textarea.focus();
+
+    if(button) {
+      let key = document.querySelectorAll('.keyboard-key');
+      key.classList.add('active')
+    }
+  });
+
+
+  document.addEventListener("keyup", (e)=> {
+    let button = keyboardKeysArr[i];
+    if(button) {
+      let key = document.querySelectorAll('.keyboard-key');
+      key.classList.remove('active');
+    }
+  });
 }
 
 
